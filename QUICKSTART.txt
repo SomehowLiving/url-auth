@@ -1,0 +1,42 @@
+﻿SECURITY TOOLKIT QUICKSTART
+
+1) Install deps
+   npm install
+
+2) Configure optional API keys in .env
+   VIRUSTOTAL_API_KEY=...
+   GOOGLE_SAFE_BROWSING_KEY=...
+
+3) Start server
+   npm start
+
+4) Open dashboard
+   http://localhost:3000
+
+App routes
+- Dashboard: / 
+- Hash Generator: /tools/hash-generator
+- Link Scanner: /tools/link-scanner
+- Password Strength Checker: /tools/password-strength-checker
+- Health: /api/health
+
+Link Scanner behavior
+- Accepts URLs with or without protocol.
+  Examples:
+  - google.com
+  - https://google.com
+  - http://example.com
+- Scanner auto-normalizes missing protocol to https://
+- Invalid input will not crash the scanner; it returns a safe JSON error result.
+- If VirusTotal/Google keys are missing, scan still runs using heuristics/WHOIS/redirect checks and reports external engines as unavailable.
+
+Troubleshooting
+- Cannot GET /tools/link-scanner
+  Make sure you started the root server from backend/ using `npm start`.
+  Also stop old node processes and restart.
+
+- npm not found in PowerShell
+  Run from WSL/Linux shell, or add Node/npm to Windows PATH.
+
+- Port 3000 in use
+  Stop existing process or set PORT in .env.

@@ -1,0 +1,3 @@
+<!-- Bootstrap HTML for directory structure -->
+This file intentionally exists to create the directory structure through git initialization.
+When you run 'npm install' and 'npm start', the directories will be created automatically.

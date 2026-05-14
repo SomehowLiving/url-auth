@@ -1,0 +1,27 @@
+{
+  "name": "security-toolkit",
+  "version": "1.0.0",
+  "description": "Unified security toolkit combining password strength checker, hash generator, and link scanner",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "security",
+    "password",
+    "hash",
+    "link-scanner",
+    "virustotal",
+    "phishing-detection"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "whois": "^2.16.1"
+  }
+}
