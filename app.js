@@ -1,7 +1,6 @@
 ﻿import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { scanUrl } from './link_scanner/scanner/index.js';
 import 'dotenv/config';
 
 const app = express();
@@ -41,10 +40,15 @@ app.post('/api/scan', async (req, res) => {
   if (!url) return res.status(400).json({ error: 'URL is required' });
 
   try {
+    const { scanUrl } = await import('./link_scanner/scanner/index.js');
     const result = await scanUrl(url);
     res.json(result);
   } catch (err) {
-    res.status(500).json({ error: 'Scan failed', message: err.message });
+    res.status(500).json({
+      error: 'Scan failed',
+      message: err.message,
+      hint: 'Ensure link_scanner files are included in deployment and API keys are configured if needed.'
+    });
   }
 });
 
