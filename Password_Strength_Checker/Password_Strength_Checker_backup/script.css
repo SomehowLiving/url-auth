@@ -1,0 +1,17 @@
+﻿*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#050805;--panel:#0b120b;--line:#1f3a1f;--txt:#b7ffbf;--dim:#76b07d;--accent:#39ff68}
+body{font-family:"Courier New",monospace;background:var(--bg);color:var(--txt);min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px}
+.container{background:var(--panel);padding:18px;border-radius:14px;border:1px solid var(--line);max-width:760px;width:100%}
+.topbar{display:flex;gap:8px;margin-bottom:10px}.dot{width:10px;height:10px;border-radius:50%}.r{background:#ff5f56}.y{background:#ffbd2e}.g{background:#27c93f}
+.prompt{color:var(--dim);margin-bottom:8px}h1{color:var(--accent);margin-bottom:10px}.back{color:var(--accent);display:inline-block;margin-bottom:14px}
+.password-checker,.password-generator{border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:14px;background:#070d08}
+label{display:block;margin-bottom:8px;color:var(--dim)}
+#passwordInput,.length-input,#generateBtn,.generated-password{width:100%;border:1px solid var(--line);background:#071009;color:var(--txt);border-radius:8px;padding:10px}
+.field-with-toggle{position:relative}
+.toggle-btn{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:1px solid var(--line);background:#0d1b0f;color:var(--accent);border-radius:6px;padding:4px 8px;cursor:pointer;font-family:inherit}
+.field-with-toggle #passwordInput{padding-right:70px}
+.field-with-toggle .generated-password{padding-right:70px;min-height:40px;display:flex;align-items:center}
+.strength-bar{height:10px;background:#0f1a11;border-radius:6px;margin:10px 0;overflow:hidden}.strength-fill{height:100%;width:0;transition:all .3s}
+.generator-controls{display:flex;gap:10px;align-items:center;margin-bottom:10px}.generator-options{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:10px}
+.strength-very-weak .strength-fill{background:#ff5f56;width:20%}.strength-weak .strength-fill{background:#ffbd2e;width:40%}.strength-fair .strength-fill{background:#ff9f1c;width:60%}.strength-good .strength-fill{background:#7dff8a;width:80%}.strength-strong .strength-fill{background:#39ff68;width:100%}
+.strength-text,.strength-score{margin-top:6px}

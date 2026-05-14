@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="topbar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+        <p class="prompt">user@security-toolkit:~$ hash-generator</p>
+        <h1>Hash Generator</h1>
+        <p class="description">Generate MD5, SHA-1, and SHA-256 hashes.</p>
+        <a class="back" href="/">back to dashboard</a>
+        <textarea id="inputText" placeholder="Enter text here"></textarea>
+        <select id="algorithm">
+            <option value="MD5">MD5</option>
+            <option value="SHA1">SHA-1</option>
+            <option value="SHA256">SHA-256</option>
+        </select>
+        <button onclick="generateHash()">Generate Hash</button>
+        <h3>Generated Hash</h3>
+        <div class="output-container">
+            <div id="output"></div>
+            <span class="copy-icon" onclick="copyHash()">copy</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

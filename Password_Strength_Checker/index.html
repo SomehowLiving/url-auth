@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Strength Checker</title>
+  <link rel="stylesheet" href="script.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span></div>
+    <p class="prompt">user@security-toolkit:~$ password-strength-checker</p>
+    <h1>Password Strength Checker</h1>
+    <a class="back" href="/">back to dashboard</a>
+
+    <div class="password-checker">
+      <label for="passwordInput">Check Password</label>
+      <div class="field-with-toggle">
+        <input id="passwordInput" type="password" placeholder="Enter password..." />
+        <button id="togglePasswordInput" class="toggle-btn" type="button">Show</button>
+      </div>
+      <div class="strength-bar"><div id="strengthFill" class="strength-fill"></div></div>
+      <p id="strengthText" class="strength-text">Enter password...</p>
+      <p id="strengthScore" class="strength-score"></p>
+    </div>
+
+    <div class="password-generator">
+      <label for="passwordLength">Generator</label>
+      <div class="generator-controls">
+        <input id="passwordLength" class="length-input" type="range" min="8" max="64" value="16" />
+        <span id="lengthDisplay"></span>
+      </div>
+      <div class="generator-options">
+        <label><input id="includeUppercase" type="checkbox" checked /> Uppercase</label>
+        <label><input id="includeNumbers" type="checkbox" checked /> Numbers</label>
+        <label><input id="includeSymbols" type="checkbox" checked /> Symbols</label>
+      </div>
+      <button id="generateBtn">Generate</button>
+      <div class="field-with-toggle">
+        <div id="generatedPassword" class="generated-password"></div>
+        <button id="toggleGeneratedPassword" class="toggle-btn" type="button">Show</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
